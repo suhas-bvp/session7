@@ -92,199 +92,340 @@ The model consists of the following blocks:
 - **Global Average Pooling (GAP) and Fully Connected (FC) Layer**: GAP reduces each feature map to a single value by averaging, which minimizes overfitting and enforces spatial invariance. The final FC layer then maps these global features to class scores. This combination is efficient and effective for classification tasks, as it reduces the number of parameters compared to flattening the entire feature map.
 
 ## Accuracy and Output
-<img width="1341" height="1029" alt="image" src="https://github.com/user-attachments/assets/cd87c81d-ab0a-422a-970d-74b20003da27" />
+<img width="1011" height="738" alt="image" src="https://github.com/user-attachments/assets/8755126f-ecc8-4a7b-a98c-4f4cd352faf1" />
 
-<img width="1785" height="967" alt="image" src="https://github.com/user-attachments/assets/2a6f2d35-415f-4ed8-a58d-43d6566c94be" />
-<img width="1823" height="991" alt="image" src="https://github.com/user-attachments/assets/474e57f6-9c06-4584-bff5-b2908027db74" />
+
+<img width="1424" height="772" alt="image" src="https://github.com/user-attachments/assets/2082769c-d624-4ef3-9352-7aa84572b9b9" />
+
+<img width="1429" height="786" alt="image" src="https://github.com/user-attachments/assets/c6b55b6c-d209-4951-8da0-544902eb059b" />
 
 
 <!-- Add your accuracy and output results here -->
 <pre><code>
 /Users/321351/PycharmProjects/PythonProject3/.venv/bin/python /Users/321351/PycharmProjects/PythonProject3/session7_exp1.py 
-/Users/321351/PycharmProjects/PythonProject3/session7_exp1.py:32: UserWarning: Argument(s) 'max_holes, max_height, max_width, fill_value' are not valid for transform CoarseDropout
-  A.CoarseDropout(
 Total trainable parameters: 86954
-Epoch 1, Batch 100: Train Loss: 1.8682, Train Accuracy: 32.52%
-Epoch 1, Batch 200: Train Loss: 1.5774, Train Accuracy: 42.16%
-Epoch 1, Batch 300: Train Loss: 1.4153, Train Accuracy: 47.95%
-Epoch 1, Batch 400: Train Loss: 1.3559, Train Accuracy: 50.05%
-Epoch 1, Batch 500: Train Loss: 1.2541, Train Accuracy: 54.22%
-Epoch 1/30, Train Loss: 1.2246, Train Accuracy: 55.48%, Test Loss: 1.1432, Test Accuracy: 59.00%
-Epoch 2, Batch 100: Train Loss: 1.2049, Train Accuracy: 56.06%
-Epoch 2, Batch 200: Train Loss: 1.1368, Train Accuracy: 58.59%
-Epoch 2, Batch 300: Train Loss: 1.0972, Train Accuracy: 59.87%
-Epoch 2, Batch 400: Train Loss: 1.0651, Train Accuracy: 61.60%
-Epoch 2, Batch 500: Train Loss: 1.0408, Train Accuracy: 62.73%
-Epoch 2/30, Train Loss: 0.9952, Train Accuracy: 64.40%, Test Loss: 0.9283, Test Accuracy: 66.91%
-Epoch 3, Batch 100: Train Loss: 0.9766, Train Accuracy: 65.04%
-Epoch 3, Batch 200: Train Loss: 0.9755, Train Accuracy: 64.94%
-Epoch 3, Batch 300: Train Loss: 0.9614, Train Accuracy: 65.32%
-Epoch 3, Batch 400: Train Loss: 0.9387, Train Accuracy: 66.91%
-Epoch 3, Batch 500: Train Loss: 0.9444, Train Accuracy: 66.61%
-Epoch 3/30, Train Loss: 0.8893, Train Accuracy: 68.32%, Test Loss: 0.8377, Test Accuracy: 69.97%
-Epoch 4, Batch 100: Train Loss: 0.8680, Train Accuracy: 69.05%
-Epoch 4, Batch 200: Train Loss: 0.8804, Train Accuracy: 69.07%
-Epoch 4, Batch 300: Train Loss: 0.8873, Train Accuracy: 68.08%
-Epoch 4, Batch 400: Train Loss: 0.8507, Train Accuracy: 69.67%
-Epoch 4, Batch 500: Train Loss: 0.8318, Train Accuracy: 70.32%
-Epoch 4/30, Train Loss: 0.8161, Train Accuracy: 71.18%, Test Loss: 0.7593, Test Accuracy: 73.05%
-Epoch 5, Batch 100: Train Loss: 0.8174, Train Accuracy: 71.07%
-Epoch 5, Batch 200: Train Loss: 0.8191, Train Accuracy: 70.72%
-Epoch 5, Batch 300: Train Loss: 0.8029, Train Accuracy: 71.54%
-Epoch 5, Batch 400: Train Loss: 0.7891, Train Accuracy: 72.55%
-Epoch 5, Batch 500: Train Loss: 0.7782, Train Accuracy: 72.55%
-Epoch 5/30, Train Loss: 0.7746, Train Accuracy: 72.63%, Test Loss: 0.7421, Test Accuracy: 73.88%
-Epoch 6, Batch 100: Train Loss: 0.7616, Train Accuracy: 73.00%
-Epoch 6, Batch 200: Train Loss: 0.7591, Train Accuracy: 73.31%
-Epoch 6, Batch 300: Train Loss: 0.7513, Train Accuracy: 73.39%
-Epoch 6, Batch 400: Train Loss: 0.7665, Train Accuracy: 72.62%
-Epoch 6, Batch 500: Train Loss: 0.7473, Train Accuracy: 73.19%
-Epoch 6/30, Train Loss: 0.7211, Train Accuracy: 74.64%, Test Loss: 0.6773, Test Accuracy: 76.40%
-Epoch 7, Batch 100: Train Loss: 0.7233, Train Accuracy: 75.11%
-Epoch 7, Batch 200: Train Loss: 0.7100, Train Accuracy: 74.42%
-Epoch 7, Batch 300: Train Loss: 0.7086, Train Accuracy: 75.05%
-Epoch 7, Batch 400: Train Loss: 0.6995, Train Accuracy: 75.48%
-Epoch 7, Batch 500: Train Loss: 0.7354, Train Accuracy: 74.06%
-Epoch 7/30, Train Loss: 0.6905, Train Accuracy: 75.97%, Test Loss: 0.6614, Test Accuracy: 76.87%
-Epoch 8, Batch 100: Train Loss: 0.7072, Train Accuracy: 75.21%
-Epoch 8, Batch 200: Train Loss: 0.6754, Train Accuracy: 75.99%
-Epoch 8, Batch 300: Train Loss: 0.6791, Train Accuracy: 76.05%
-Epoch 8, Batch 400: Train Loss: 0.6750, Train Accuracy: 76.39%
-Epoch 8, Batch 500: Train Loss: 0.6937, Train Accuracy: 75.37%
-Epoch 8/30, Train Loss: 0.6653, Train Accuracy: 76.69%, Test Loss: 0.6208, Test Accuracy: 78.45%
-Epoch 9, Batch 100: Train Loss: 0.6549, Train Accuracy: 76.72%
-Epoch 9, Batch 200: Train Loss: 0.6725, Train Accuracy: 76.37%
-Epoch 9, Batch 300: Train Loss: 0.6645, Train Accuracy: 76.25%
-Epoch 9, Batch 400: Train Loss: 0.6772, Train Accuracy: 76.01%
-Epoch 9, Batch 500: Train Loss: 0.6497, Train Accuracy: 77.85%
-Epoch 9/30, Train Loss: 0.6291, Train Accuracy: 78.08%, Test Loss: 0.5991, Test Accuracy: 79.41%
-Epoch 10, Batch 100: Train Loss: 0.6244, Train Accuracy: 78.32%
-Epoch 10, Batch 200: Train Loss: 0.6517, Train Accuracy: 77.08%
-Epoch 10, Batch 300: Train Loss: 0.6538, Train Accuracy: 76.90%
-Epoch 10, Batch 400: Train Loss: 0.6369, Train Accuracy: 77.76%
-Epoch 10, Batch 500: Train Loss: 0.6382, Train Accuracy: 77.61%
-Epoch 10/30, Train Loss: 0.6294, Train Accuracy: 77.86%, Test Loss: 0.6103, Test Accuracy: 79.04%
-Epoch 11, Batch 100: Train Loss: 0.6285, Train Accuracy: 77.97%
-Epoch 11, Batch 200: Train Loss: 0.6538, Train Accuracy: 77.42%
-Epoch 11, Batch 300: Train Loss: 0.6071, Train Accuracy: 78.50%
-Epoch 11, Batch 400: Train Loss: 0.6193, Train Accuracy: 78.50%
-Epoch 11, Batch 500: Train Loss: 0.6063, Train Accuracy: 78.91%
-Epoch 11/30, Train Loss: 0.5987, Train Accuracy: 79.02%, Test Loss: 0.5867, Test Accuracy: 79.72%
-Epoch 12, Batch 100: Train Loss: 0.6069, Train Accuracy: 78.73%
-Epoch 12, Batch 200: Train Loss: 0.5971, Train Accuracy: 79.48%
-Epoch 12, Batch 300: Train Loss: 0.5997, Train Accuracy: 79.12%
-Epoch 12, Batch 400: Train Loss: 0.6025, Train Accuracy: 78.72%
-Epoch 12, Batch 500: Train Loss: 0.6026, Train Accuracy: 79.32%
-Epoch 12/30, Train Loss: 0.5923, Train Accuracy: 79.54%, Test Loss: 0.5699, Test Accuracy: 80.26%
-Epoch 13, Batch 100: Train Loss: 0.5940, Train Accuracy: 79.29%
-Epoch 13, Batch 200: Train Loss: 0.5873, Train Accuracy: 79.89%
-Epoch 13, Batch 300: Train Loss: 0.5890, Train Accuracy: 79.36%
-Epoch 13, Batch 400: Train Loss: 0.5938, Train Accuracy: 79.47%
-Epoch 13, Batch 500: Train Loss: 0.6028, Train Accuracy: 78.43%
-Epoch 13/30, Train Loss: 0.5748, Train Accuracy: 80.13%, Test Loss: 0.5528, Test Accuracy: 81.08%
-Epoch 14, Batch 100: Train Loss: 0.5647, Train Accuracy: 80.68%
-Epoch 14, Batch 200: Train Loss: 0.5787, Train Accuracy: 80.27%
-Epoch 14, Batch 300: Train Loss: 0.5986, Train Accuracy: 78.89%
-Epoch 14, Batch 400: Train Loss: 0.5786, Train Accuracy: 79.88%
-Epoch 14, Batch 500: Train Loss: 0.5775, Train Accuracy: 79.62%
-Epoch 14/30, Train Loss: 0.5526, Train Accuracy: 80.79%, Test Loss: 0.5392, Test Accuracy: 81.77%
-Epoch 15, Batch 100: Train Loss: 0.5647, Train Accuracy: 80.43%
-Epoch 15, Batch 200: Train Loss: 0.5607, Train Accuracy: 80.56%
-Epoch 15, Batch 300: Train Loss: 0.5628, Train Accuracy: 80.40%
-Epoch 15, Batch 400: Train Loss: 0.5587, Train Accuracy: 80.38%
-Epoch 15, Batch 500: Train Loss: 0.5600, Train Accuracy: 80.61%
-Epoch 15/30, Train Loss: 0.5377, Train Accuracy: 81.27%, Test Loss: 0.5350, Test Accuracy: 81.63%
-Epoch 16, Batch 100: Train Loss: 0.5265, Train Accuracy: 81.54%
-Epoch 16, Batch 200: Train Loss: 0.5604, Train Accuracy: 80.66%
-Epoch 16, Batch 300: Train Loss: 0.5810, Train Accuracy: 79.75%
-Epoch 16, Batch 400: Train Loss: 0.5317, Train Accuracy: 81.42%
-Epoch 16, Batch 500: Train Loss: 0.5675, Train Accuracy: 80.61%
-Epoch 16/30, Train Loss: 0.5516, Train Accuracy: 80.95%, Test Loss: 0.5502, Test Accuracy: 81.09%
-Epoch 17, Batch 100: Train Loss: 0.5400, Train Accuracy: 81.24%
-Epoch 17, Batch 200: Train Loss: 0.5547, Train Accuracy: 80.62%
-Epoch 17, Batch 300: Train Loss: 0.5311, Train Accuracy: 81.64%
-Epoch 17, Batch 400: Train Loss: 0.5479, Train Accuracy: 80.71%
-Epoch 17, Batch 500: Train Loss: 0.5434, Train Accuracy: 81.04%
-Epoch 17/30, Train Loss: 0.5267, Train Accuracy: 81.56%, Test Loss: 0.5243, Test Accuracy: 82.00%
-Epoch 18, Batch 100: Train Loss: 0.5224, Train Accuracy: 81.76%
-Epoch 18, Batch 200: Train Loss: 0.5303, Train Accuracy: 81.28%
-Epoch 18, Batch 300: Train Loss: 0.5358, Train Accuracy: 81.30%
-Epoch 18, Batch 400: Train Loss: 0.5236, Train Accuracy: 81.34%
-Epoch 18, Batch 500: Train Loss: 0.5454, Train Accuracy: 81.18%
-Epoch 18/30, Train Loss: 0.5170, Train Accuracy: 81.99%, Test Loss: 0.5177, Test Accuracy: 82.38%
-Epoch 19, Batch 100: Train Loss: 0.5077, Train Accuracy: 82.41%
-Epoch 19, Batch 200: Train Loss: 0.5211, Train Accuracy: 81.52%
-Epoch 19, Batch 300: Train Loss: 0.5362, Train Accuracy: 80.87%
-Epoch 19, Batch 400: Train Loss: 0.5362, Train Accuracy: 81.48%
-Epoch 19, Batch 500: Train Loss: 0.5207, Train Accuracy: 81.89%
-Epoch 19/30, Train Loss: 0.5038, Train Accuracy: 82.43%, Test Loss: 0.5201, Test Accuracy: 82.39%
-Epoch 20, Batch 100: Train Loss: 0.5190, Train Accuracy: 81.97%
-Epoch 20, Batch 200: Train Loss: 0.5072, Train Accuracy: 82.12%
-Epoch 20, Batch 300: Train Loss: 0.5174, Train Accuracy: 81.92%
-Epoch 20, Batch 400: Train Loss: 0.5338, Train Accuracy: 81.72%
-Epoch 20, Batch 500: Train Loss: 0.5237, Train Accuracy: 81.91%
-Epoch 20/30, Train Loss: 0.4969, Train Accuracy: 82.84%, Test Loss: 0.4987, Test Accuracy: 82.74%
-Epoch 21, Batch 100: Train Loss: 0.5034, Train Accuracy: 82.20%
-Epoch 21, Batch 200: Train Loss: 0.5075, Train Accuracy: 81.99%
-Epoch 21, Batch 300: Train Loss: 0.5038, Train Accuracy: 82.31%
-Epoch 21, Batch 400: Train Loss: 0.4914, Train Accuracy: 83.04%
-Epoch 21, Batch 500: Train Loss: 0.5180, Train Accuracy: 81.59%
-Epoch 21/30, Train Loss: 0.4909, Train Accuracy: 82.70%, Test Loss: 0.5038, Test Accuracy: 82.66%
-Epoch 22, Batch 100: Train Loss: 0.5073, Train Accuracy: 82.82%
-Epoch 22, Batch 200: Train Loss: 0.4968, Train Accuracy: 82.42%
-Epoch 22, Batch 300: Train Loss: 0.4909, Train Accuracy: 82.59%
-Epoch 22, Batch 400: Train Loss: 0.4980, Train Accuracy: 82.38%
-Epoch 22, Batch 500: Train Loss: 0.5005, Train Accuracy: 82.75%
-Epoch 22/30, Train Loss: 0.4879, Train Accuracy: 83.00%, Test Loss: 0.5027, Test Accuracy: 83.05%
-Epoch 23, Batch 100: Train Loss: 0.4924, Train Accuracy: 83.05%
-Epoch 23, Batch 200: Train Loss: 0.4923, Train Accuracy: 82.98%
-Epoch 23, Batch 300: Train Loss: 0.4835, Train Accuracy: 83.06%
-Epoch 23, Batch 400: Train Loss: 0.4925, Train Accuracy: 82.97%
-Epoch 23, Batch 500: Train Loss: 0.4979, Train Accuracy: 82.74%
-Epoch 23/30, Train Loss: 0.4885, Train Accuracy: 82.91%, Test Loss: 0.5014, Test Accuracy: 82.72%
-Epoch 24, Batch 100: Train Loss: 0.4778, Train Accuracy: 83.37%
-Epoch 24, Batch 200: Train Loss: 0.4962, Train Accuracy: 83.04%
-Epoch 24, Batch 300: Train Loss: 0.4792, Train Accuracy: 83.18%
-Epoch 24, Batch 400: Train Loss: 0.4900, Train Accuracy: 83.16%
-Epoch 24, Batch 500: Train Loss: 0.4826, Train Accuracy: 83.44%
-Epoch 24/30, Train Loss: 0.4616, Train Accuracy: 83.69%, Test Loss: 0.4781, Test Accuracy: 83.29%
-Epoch 25, Batch 100: Train Loss: 0.4619, Train Accuracy: 83.92%
-Epoch 25, Batch 200: Train Loss: 0.4921, Train Accuracy: 83.19%
-Epoch 25, Batch 300: Train Loss: 0.4839, Train Accuracy: 83.70%
-Epoch 25, Batch 400: Train Loss: 0.4771, Train Accuracy: 83.93%
-Epoch 25, Batch 500: Train Loss: 0.4883, Train Accuracy: 83.00%
-Epoch 25/30, Train Loss: 0.4625, Train Accuracy: 83.93%, Test Loss: 0.4857, Test Accuracy: 83.70%
-Epoch 26, Batch 100: Train Loss: 0.4701, Train Accuracy: 83.62%
-Epoch 26, Batch 200: Train Loss: 0.4682, Train Accuracy: 83.58%
-Epoch 26, Batch 300: Train Loss: 0.4876, Train Accuracy: 83.23%
-Epoch 26, Batch 400: Train Loss: 0.4660, Train Accuracy: 83.71%
-Epoch 26, Batch 500: Train Loss: 0.4832, Train Accuracy: 83.28%
-Epoch 26/30, Train Loss: 0.4637, Train Accuracy: 83.84%, Test Loss: 0.4797, Test Accuracy: 83.71%
-Epoch 27, Batch 100: Train Loss: 0.4564, Train Accuracy: 83.83%
-Epoch 27, Batch 200: Train Loss: 0.4766, Train Accuracy: 83.25%
-Epoch 27, Batch 300: Train Loss: 0.4593, Train Accuracy: 83.98%
-Epoch 27, Batch 400: Train Loss: 0.4729, Train Accuracy: 83.62%
-Epoch 27, Batch 500: Train Loss: 0.4900, Train Accuracy: 82.60%
-Epoch 27/30, Train Loss: 0.4488, Train Accuracy: 84.49%, Test Loss: 0.4811, Test Accuracy: 83.30%
-Epoch 28, Batch 100: Train Loss: 0.4705, Train Accuracy: 83.52%
-Epoch 28, Batch 200: Train Loss: 0.4595, Train Accuracy: 83.98%
-Epoch 28, Batch 300: Train Loss: 0.4669, Train Accuracy: 83.62%
-Epoch 28, Batch 400: Train Loss: 0.4531, Train Accuracy: 84.39%
-Epoch 28, Batch 500: Train Loss: 0.4706, Train Accuracy: 83.49%
-Epoch 28/30, Train Loss: 0.4532, Train Accuracy: 84.27%, Test Loss: 0.4770, Test Accuracy: 83.89%
-Epoch 29, Batch 100: Train Loss: 0.4593, Train Accuracy: 83.66%
-Epoch 29, Batch 200: Train Loss: 0.4579, Train Accuracy: 84.02%
-Epoch 29, Batch 300: Train Loss: 0.4603, Train Accuracy: 83.75%
-Epoch 29, Batch 400: Train Loss: 0.4621, Train Accuracy: 83.67%
-Epoch 29, Batch 500: Train Loss: 0.4542, Train Accuracy: 84.18%
-Epoch 29/30, Train Loss: 0.4487, Train Accuracy: 84.27%, Test Loss: 0.4740, Test Accuracy: 83.77%
-Epoch 30, Batch 100: Train Loss: 0.4384, Train Accuracy: 84.73%
-Epoch 30, Batch 200: Train Loss: 0.4552, Train Accuracy: 84.04%
-Epoch 30, Batch 300: Train Loss: 0.4593, Train Accuracy: 83.75%
-Epoch 30, Batch 400: Train Loss: 0.4629, Train Accuracy: 83.88%
-Epoch 30, Batch 500: Train Loss: 0.4532, Train Accuracy: 84.59%
-Epoch 30/30, Train Loss: 0.4530, Train Accuracy: 84.26%, Test Loss: 0.4712, Test Accuracy: 84.11%
+Epoch 1, Batch 100: Train Loss: 1.8961, Train Accuracy: 30.67%
+Epoch 1, Batch 200: Train Loss: 1.6376, Train Accuracy: 39.08%
+Epoch 1, Batch 300: Train Loss: 1.5321, Train Accuracy: 43.27%
+Epoch 1, Batch 400: Train Loss: 1.4587, Train Accuracy: 46.39%
+Epoch 1, Batch 500: Train Loss: 1.4062, Train Accuracy: 49.02%
+Epoch 1, Batch 600: Train Loss: 1.3245, Train Accuracy: 51.89%
+Epoch 1, Batch 700: Train Loss: 1.2862, Train Accuracy: 53.09%
+Epoch 1/40, Train Loss: 1.2243, Train Accuracy: 55.88%, Test Loss: 1.1497, Test Accuracy: 58.42%
+Epoch 2, Batch 100: Train Loss: 1.2107, Train Accuracy: 57.44%
+Epoch 2, Batch 200: Train Loss: 1.1558, Train Accuracy: 58.36%
+Epoch 2, Batch 300: Train Loss: 1.1280, Train Accuracy: 59.16%
+Epoch 2, Batch 400: Train Loss: 1.0929, Train Accuracy: 60.58%
+Epoch 2, Batch 500: Train Loss: 1.0884, Train Accuracy: 61.31%
+Epoch 2, Batch 600: Train Loss: 1.0481, Train Accuracy: 61.59%
+Epoch 2, Batch 700: Train Loss: 1.0450, Train Accuracy: 62.61%
+Epoch 2/40, Train Loss: 1.0233, Train Accuracy: 63.33%, Test Loss: 0.9488, Test Accuracy: 65.55%
+Epoch 3, Batch 100: Train Loss: 1.0096, Train Accuracy: 64.67%
+Epoch 3, Batch 200: Train Loss: 1.0096, Train Accuracy: 63.67%
+Epoch 3, Batch 300: Train Loss: 0.9407, Train Accuracy: 66.34%
+Epoch 3, Batch 400: Train Loss: 0.9652, Train Accuracy: 65.08%
+Epoch 3, Batch 500: Train Loss: 0.9610, Train Accuracy: 65.33%
+Epoch 3, Batch 600: Train Loss: 0.9295, Train Accuracy: 67.34%
+Epoch 3, Batch 700: Train Loss: 0.9396, Train Accuracy: 66.30%
+Epoch 3/40, Train Loss: 0.8888, Train Accuracy: 68.71%, Test Loss: 0.8150, Test Accuracy: 70.97%
+Epoch 4, Batch 100: Train Loss: 0.9039, Train Accuracy: 67.27%
+Epoch 4, Batch 200: Train Loss: 0.8920, Train Accuracy: 67.95%
+Epoch 4, Batch 300: Train Loss: 0.8841, Train Accuracy: 68.41%
+Epoch 4, Batch 400: Train Loss: 0.8761, Train Accuracy: 68.42%
+Epoch 4, Batch 500: Train Loss: 0.8538, Train Accuracy: 70.00%
+Epoch 4, Batch 600: Train Loss: 0.8576, Train Accuracy: 69.27%
+Epoch 4, Batch 700: Train Loss: 0.8459, Train Accuracy: 70.66%
+Epoch 4/40, Train Loss: 0.8251, Train Accuracy: 70.90%, Test Loss: 0.7609, Test Accuracy: 72.79%
+Epoch 5, Batch 100: Train Loss: 0.8301, Train Accuracy: 70.53%
+Epoch 5, Batch 200: Train Loss: 0.8073, Train Accuracy: 72.28%
+Epoch 5, Batch 300: Train Loss: 0.8278, Train Accuracy: 70.97%
+Epoch 5, Batch 400: Train Loss: 0.8232, Train Accuracy: 71.12%
+Epoch 5, Batch 500: Train Loss: 0.7957, Train Accuracy: 72.03%
+Epoch 5, Batch 600: Train Loss: 0.8061, Train Accuracy: 71.88%
+Epoch 5, Batch 700: Train Loss: 0.7965, Train Accuracy: 71.58%
+Epoch 5/40, Train Loss: 0.7657, Train Accuracy: 73.23%, Test Loss: 0.7091, Test Accuracy: 75.07%
+Epoch 6, Batch 100: Train Loss: 0.7648, Train Accuracy: 72.92%
+Epoch 6, Batch 200: Train Loss: 0.7690, Train Accuracy: 72.23%
+Epoch 6, Batch 300: Train Loss: 0.7538, Train Accuracy: 72.75%
+Epoch 6, Batch 400: Train Loss: 0.7766, Train Accuracy: 72.31%
+Epoch 6, Batch 500: Train Loss: 0.7758, Train Accuracy: 72.78%
+Epoch 6, Batch 600: Train Loss: 0.7522, Train Accuracy: 73.86%
+Epoch 6, Batch 700: Train Loss: 0.7530, Train Accuracy: 73.69%
+Epoch 6/40, Train Loss: 0.7216, Train Accuracy: 74.59%, Test Loss: 0.6828, Test Accuracy: 76.55%
+Epoch 7, Batch 100: Train Loss: 0.7289, Train Accuracy: 74.28%
+Epoch 7, Batch 200: Train Loss: 0.7146, Train Accuracy: 74.62%
+Epoch 7, Batch 300: Train Loss: 0.7296, Train Accuracy: 74.44%
+Epoch 7, Batch 400: Train Loss: 0.7466, Train Accuracy: 73.94%
+Epoch 7, Batch 500: Train Loss: 0.7184, Train Accuracy: 74.62%
+Epoch 7, Batch 600: Train Loss: 0.7134, Train Accuracy: 75.42%
+Epoch 7, Batch 700: Train Loss: 0.7286, Train Accuracy: 74.94%
+Epoch 7/40, Train Loss: 0.6845, Train Accuracy: 76.04%, Test Loss: 0.6369, Test Accuracy: 77.95%
+Epoch 8, Batch 100: Train Loss: 0.6912, Train Accuracy: 76.03%
+Epoch 8, Batch 200: Train Loss: 0.6927, Train Accuracy: 75.33%
+Epoch 8, Batch 300: Train Loss: 0.7098, Train Accuracy: 75.31%
+Epoch 8, Batch 400: Train Loss: 0.7147, Train Accuracy: 75.06%
+Epoch 8, Batch 500: Train Loss: 0.6983, Train Accuracy: 75.64%
+Epoch 8, Batch 600: Train Loss: 0.6778, Train Accuracy: 75.67%
+Epoch 8, Batch 700: Train Loss: 0.6909, Train Accuracy: 75.75%
+Epoch 8/40, Train Loss: 0.6752, Train Accuracy: 76.22%, Test Loss: 0.6406, Test Accuracy: 77.56%
+Epoch 9, Batch 100: Train Loss: 0.6875, Train Accuracy: 76.48%
+Epoch 9, Batch 200: Train Loss: 0.6753, Train Accuracy: 76.31%
+Epoch 9, Batch 300: Train Loss: 0.6558, Train Accuracy: 77.31%
+Epoch 9, Batch 400: Train Loss: 0.6781, Train Accuracy: 76.00%
+Epoch 9, Batch 500: Train Loss: 0.6660, Train Accuracy: 76.45%
+Epoch 9, Batch 600: Train Loss: 0.6678, Train Accuracy: 76.91%
+Epoch 9, Batch 700: Train Loss: 0.6757, Train Accuracy: 76.86%
+Epoch 9/40, Train Loss: 0.6609, Train Accuracy: 76.72%, Test Loss: 0.6237, Test Accuracy: 78.38%
+Epoch 10, Batch 100: Train Loss: 0.6468, Train Accuracy: 76.98%
+Epoch 10, Batch 200: Train Loss: 0.6362, Train Accuracy: 77.47%
+Epoch 10, Batch 300: Train Loss: 0.6492, Train Accuracy: 77.45%
+Epoch 10, Batch 400: Train Loss: 0.6422, Train Accuracy: 78.17%
+Epoch 10, Batch 500: Train Loss: 0.6541, Train Accuracy: 77.58%
+Epoch 10, Batch 600: Train Loss: 0.6405, Train Accuracy: 77.47%
+Epoch 10, Batch 700: Train Loss: 0.6380, Train Accuracy: 77.73%
+Epoch 10/40, Train Loss: 0.6291, Train Accuracy: 77.99%, Test Loss: 0.5925, Test Accuracy: 79.37%
+Epoch 11, Batch 100: Train Loss: 0.6271, Train Accuracy: 78.00%
+Epoch 11, Batch 200: Train Loss: 0.6343, Train Accuracy: 77.91%
+Epoch 11, Batch 300: Train Loss: 0.6437, Train Accuracy: 77.45%
+Epoch 11, Batch 400: Train Loss: 0.6349, Train Accuracy: 78.03%
+Epoch 11, Batch 500: Train Loss: 0.6106, Train Accuracy: 79.02%
+Epoch 11, Batch 600: Train Loss: 0.6138, Train Accuracy: 78.72%
+Epoch 11, Batch 700: Train Loss: 0.6144, Train Accuracy: 78.89%
+Epoch 11/40, Train Loss: 0.6159, Train Accuracy: 78.50%, Test Loss: 0.5836, Test Accuracy: 79.75%
+Epoch 12, Batch 100: Train Loss: 0.5974, Train Accuracy: 79.34%
+Epoch 12, Batch 200: Train Loss: 0.6049, Train Accuracy: 78.89%
+Epoch 12, Batch 300: Train Loss: 0.6193, Train Accuracy: 78.06%
+Epoch 12, Batch 400: Train Loss: 0.6283, Train Accuracy: 78.14%
+Epoch 12, Batch 500: Train Loss: 0.6036, Train Accuracy: 79.12%
+Epoch 12, Batch 600: Train Loss: 0.6116, Train Accuracy: 78.03%
+Epoch 12, Batch 700: Train Loss: 0.5966, Train Accuracy: 78.58%
+Epoch 12/40, Train Loss: 0.5839, Train Accuracy: 79.62%, Test Loss: 0.5562, Test Accuracy: 80.62%
+Epoch 13, Batch 100: Train Loss: 0.5744, Train Accuracy: 80.31%
+Epoch 13, Batch 200: Train Loss: 0.5806, Train Accuracy: 80.20%
+Epoch 13, Batch 300: Train Loss: 0.6070, Train Accuracy: 78.28%
+Epoch 13, Batch 400: Train Loss: 0.6039, Train Accuracy: 78.50%
+Epoch 13, Batch 500: Train Loss: 0.5839, Train Accuracy: 79.95%
+Epoch 13, Batch 600: Train Loss: 0.6073, Train Accuracy: 79.17%
+Epoch 13, Batch 700: Train Loss: 0.5917, Train Accuracy: 79.03%
+Epoch 13/40, Train Loss: 0.5772, Train Accuracy: 80.12%, Test Loss: 0.5521, Test Accuracy: 80.81%
+Epoch 14, Batch 100: Train Loss: 0.5926, Train Accuracy: 78.98%
+Epoch 14, Batch 200: Train Loss: 0.5962, Train Accuracy: 79.50%
+Epoch 14, Batch 300: Train Loss: 0.5808, Train Accuracy: 80.39%
+Epoch 14, Batch 400: Train Loss: 0.5875, Train Accuracy: 80.03%
+Epoch 14, Batch 500: Train Loss: 0.5726, Train Accuracy: 79.88%
+Epoch 14, Batch 600: Train Loss: 0.5868, Train Accuracy: 79.09%
+Epoch 14, Batch 700: Train Loss: 0.5636, Train Accuracy: 80.48%
+Epoch 14/40, Train Loss: 0.5732, Train Accuracy: 80.07%, Test Loss: 0.5552, Test Accuracy: 80.72%
+Epoch 15, Batch 100: Train Loss: 0.5607, Train Accuracy: 80.84%
+Epoch 15, Batch 200: Train Loss: 0.5827, Train Accuracy: 79.47%
+Epoch 15, Batch 300: Train Loss: 0.5630, Train Accuracy: 80.66%
+Epoch 15, Batch 400: Train Loss: 0.5583, Train Accuracy: 80.58%
+Epoch 15, Batch 500: Train Loss: 0.5699, Train Accuracy: 80.19%
+Epoch 15, Batch 600: Train Loss: 0.5660, Train Accuracy: 80.36%
+Epoch 15, Batch 700: Train Loss: 0.5842, Train Accuracy: 79.61%
+Epoch 15/40, Train Loss: 0.5630, Train Accuracy: 80.31%, Test Loss: 0.5572, Test Accuracy: 80.52%
+Epoch 16, Batch 100: Train Loss: 0.5749, Train Accuracy: 80.41%
+Epoch 16, Batch 200: Train Loss: 0.5558, Train Accuracy: 80.78%
+Epoch 16, Batch 300: Train Loss: 0.5562, Train Accuracy: 80.42%
+Epoch 16, Batch 400: Train Loss: 0.5438, Train Accuracy: 80.77%
+Epoch 16, Batch 500: Train Loss: 0.5658, Train Accuracy: 79.80%
+Epoch 16, Batch 600: Train Loss: 0.5452, Train Accuracy: 81.36%
+Epoch 16, Batch 700: Train Loss: 0.5485, Train Accuracy: 80.53%
+Epoch 16/40, Train Loss: 0.5473, Train Accuracy: 81.02%, Test Loss: 0.5396, Test Accuracy: 81.44%
+Epoch 17, Batch 100: Train Loss: 0.5622, Train Accuracy: 79.86%
+Epoch 17, Batch 200: Train Loss: 0.5617, Train Accuracy: 80.34%
+Epoch 17, Batch 300: Train Loss: 0.5385, Train Accuracy: 81.45%
+Epoch 17, Batch 400: Train Loss: 0.5191, Train Accuracy: 82.23%
+Epoch 17, Batch 500: Train Loss: 0.5725, Train Accuracy: 79.81%
+Epoch 17, Batch 600: Train Loss: 0.5558, Train Accuracy: 80.67%
+Epoch 17, Batch 700: Train Loss: 0.5548, Train Accuracy: 80.56%
+Epoch 17/40, Train Loss: 0.5363, Train Accuracy: 81.28%, Test Loss: 0.5419, Test Accuracy: 81.18%
+Epoch 18, Batch 100: Train Loss: 0.5397, Train Accuracy: 81.12%
+Epoch 18, Batch 200: Train Loss: 0.5268, Train Accuracy: 81.86%
+Epoch 18, Batch 300: Train Loss: 0.5318, Train Accuracy: 81.30%
+Epoch 18, Batch 400: Train Loss: 0.5484, Train Accuracy: 80.88%
+Epoch 18, Batch 500: Train Loss: 0.5300, Train Accuracy: 81.98%
+Epoch 18, Batch 600: Train Loss: 0.5529, Train Accuracy: 80.64%
+Epoch 18, Batch 700: Train Loss: 0.5434, Train Accuracy: 81.22%
+Epoch 18/40, Train Loss: 0.5183, Train Accuracy: 81.85%, Test Loss: 0.5204, Test Accuracy: 82.15%
+Epoch 19, Batch 100: Train Loss: 0.5186, Train Accuracy: 81.98%
+Epoch 19, Batch 200: Train Loss: 0.5472, Train Accuracy: 80.91%
+Epoch 19, Batch 300: Train Loss: 0.5258, Train Accuracy: 81.72%
+Epoch 19, Batch 400: Train Loss: 0.5437, Train Accuracy: 80.88%
+Epoch 19, Batch 500: Train Loss: 0.5352, Train Accuracy: 81.55%
+Epoch 19, Batch 600: Train Loss: 0.5161, Train Accuracy: 82.20%
+Epoch 19, Batch 700: Train Loss: 0.5272, Train Accuracy: 81.50%
+Epoch 19/40, Train Loss: 0.5088, Train Accuracy: 82.44%, Test Loss: 0.5066, Test Accuracy: 82.29%
+Epoch 20, Batch 100: Train Loss: 0.4993, Train Accuracy: 82.38%
+Epoch 20, Batch 200: Train Loss: 0.5285, Train Accuracy: 81.09%
+Epoch 20, Batch 300: Train Loss: 0.5302, Train Accuracy: 81.77%
+Epoch 20, Batch 400: Train Loss: 0.5299, Train Accuracy: 81.36%
+Epoch 20, Batch 500: Train Loss: 0.5188, Train Accuracy: 81.47%
+Epoch 20, Batch 600: Train Loss: 0.5239, Train Accuracy: 82.20%
+Epoch 20, Batch 700: Train Loss: 0.5306, Train Accuracy: 81.69%
+Epoch 20/40, Train Loss: 0.5026, Train Accuracy: 82.42%, Test Loss: 0.5050, Test Accuracy: 82.49%
+Epoch 21, Batch 100: Train Loss: 0.5154, Train Accuracy: 81.73%
+Epoch 21, Batch 200: Train Loss: 0.5173, Train Accuracy: 82.23%
+Epoch 21, Batch 300: Train Loss: 0.5167, Train Accuracy: 81.98%
+Epoch 21, Batch 400: Train Loss: 0.5244, Train Accuracy: 81.72%
+Epoch 21, Batch 500: Train Loss: 0.5272, Train Accuracy: 81.23%
+Epoch 21, Batch 600: Train Loss: 0.5239, Train Accuracy: 81.75%
+Epoch 21, Batch 700: Train Loss: 0.5331, Train Accuracy: 81.56%
+Epoch 21/40, Train Loss: 0.4982, Train Accuracy: 82.81%, Test Loss: 0.5044, Test Accuracy: 82.43%
+Epoch 22, Batch 100: Train Loss: 0.5050, Train Accuracy: 82.23%
+Epoch 22, Batch 200: Train Loss: 0.5038, Train Accuracy: 82.59%
+Epoch 22, Batch 300: Train Loss: 0.4990, Train Accuracy: 82.44%
+Epoch 22, Batch 400: Train Loss: 0.4940, Train Accuracy: 82.81%
+Epoch 22, Batch 500: Train Loss: 0.5050, Train Accuracy: 82.28%
+Epoch 22, Batch 600: Train Loss: 0.4967, Train Accuracy: 81.81%
+Epoch 22, Batch 700: Train Loss: 0.5216, Train Accuracy: 82.17%
+Epoch 22/40, Train Loss: 0.5002, Train Accuracy: 82.60%, Test Loss: 0.5117, Test Accuracy: 82.24%
+Epoch 23, Batch 100: Train Loss: 0.5018, Train Accuracy: 82.38%
+Epoch 23, Batch 200: Train Loss: 0.5026, Train Accuracy: 82.36%
+Epoch 23, Batch 300: Train Loss: 0.5054, Train Accuracy: 82.39%
+Epoch 23, Batch 400: Train Loss: 0.4845, Train Accuracy: 82.45%
+Epoch 23, Batch 500: Train Loss: 0.4952, Train Accuracy: 82.83%
+Epoch 23, Batch 600: Train Loss: 0.5000, Train Accuracy: 82.80%
+Epoch 23, Batch 700: Train Loss: 0.5122, Train Accuracy: 81.88%
+Epoch 23/40, Train Loss: 0.4835, Train Accuracy: 83.32%, Test Loss: 0.4871, Test Accuracy: 82.72%
+Epoch 24, Batch 100: Train Loss: 0.4760, Train Accuracy: 83.17%
+Epoch 24, Batch 200: Train Loss: 0.4777, Train Accuracy: 83.44%
+Epoch 24, Batch 300: Train Loss: 0.4915, Train Accuracy: 82.86%
+Epoch 24, Batch 400: Train Loss: 0.4956, Train Accuracy: 83.03%
+Epoch 24, Batch 500: Train Loss: 0.4946, Train Accuracy: 82.86%
+Epoch 24, Batch 600: Train Loss: 0.5015, Train Accuracy: 82.75%
+Epoch 24, Batch 700: Train Loss: 0.4959, Train Accuracy: 82.83%
+Epoch 24/40, Train Loss: 0.4827, Train Accuracy: 83.08%, Test Loss: 0.4909, Test Accuracy: 83.17%
+Epoch 25, Batch 100: Train Loss: 0.4759, Train Accuracy: 83.75%
+Epoch 25, Batch 200: Train Loss: 0.4737, Train Accuracy: 83.39%
+Epoch 25, Batch 300: Train Loss: 0.4949, Train Accuracy: 82.70%
+Epoch 25, Batch 400: Train Loss: 0.4926, Train Accuracy: 82.56%
+Epoch 25, Batch 500: Train Loss: 0.4886, Train Accuracy: 82.84%
+Epoch 25, Batch 600: Train Loss: 0.4888, Train Accuracy: 83.27%
+Epoch 25, Batch 700: Train Loss: 0.4890, Train Accuracy: 83.08%
+Epoch 25/40, Train Loss: 0.4732, Train Accuracy: 83.49%, Test Loss: 0.4779, Test Accuracy: 83.48%
+Epoch 26, Batch 100: Train Loss: 0.4850, Train Accuracy: 83.45%
+Epoch 26, Batch 200: Train Loss: 0.4796, Train Accuracy: 82.81%
+Epoch 26, Batch 300: Train Loss: 0.4851, Train Accuracy: 82.94%
+Epoch 26, Batch 400: Train Loss: 0.4802, Train Accuracy: 82.94%
+Epoch 26, Batch 500: Train Loss: 0.4757, Train Accuracy: 83.20%
+Epoch 26, Batch 600: Train Loss: 0.4747, Train Accuracy: 83.94%
+Epoch 26, Batch 700: Train Loss: 0.5032, Train Accuracy: 82.36%
+Epoch 26/40, Train Loss: 0.4708, Train Accuracy: 83.55%, Test Loss: 0.4876, Test Accuracy: 82.94%
+Epoch 27, Batch 100: Train Loss: 0.4743, Train Accuracy: 84.16%
+Epoch 27, Batch 200: Train Loss: 0.4599, Train Accuracy: 83.92%
+Epoch 27, Batch 300: Train Loss: 0.4703, Train Accuracy: 83.66%
+Epoch 27, Batch 400: Train Loss: 0.4601, Train Accuracy: 83.55%
+Epoch 27, Batch 500: Train Loss: 0.4761, Train Accuracy: 83.50%
+Epoch 27, Batch 600: Train Loss: 0.4636, Train Accuracy: 83.52%
+Epoch 27, Batch 700: Train Loss: 0.4620, Train Accuracy: 83.53%
+Epoch 27/40, Train Loss: 0.4555, Train Accuracy: 84.14%, Test Loss: 0.4771, Test Accuracy: 83.32%
+Epoch 28, Batch 100: Train Loss: 0.4603, Train Accuracy: 83.98%
+Epoch 28, Batch 200: Train Loss: 0.4599, Train Accuracy: 84.52%
+Epoch 28, Batch 300: Train Loss: 0.4716, Train Accuracy: 84.02%
+Epoch 28, Batch 400: Train Loss: 0.4700, Train Accuracy: 84.05%
+Epoch 28, Batch 500: Train Loss: 0.4629, Train Accuracy: 84.02%
+Epoch 28, Batch 600: Train Loss: 0.4874, Train Accuracy: 82.98%
+Epoch 28, Batch 700: Train Loss: 0.4631, Train Accuracy: 83.86%
+Epoch 28/40, Train Loss: 0.4467, Train Accuracy: 84.52%, Test Loss: 0.4793, Test Accuracy: 83.02%
+Epoch 29, Batch 100: Train Loss: 0.4742, Train Accuracy: 83.36%
+Epoch 29, Batch 200: Train Loss: 0.4439, Train Accuracy: 84.69%
+Epoch 29, Batch 300: Train Loss: 0.4685, Train Accuracy: 83.48%
+Epoch 29, Batch 400: Train Loss: 0.4728, Train Accuracy: 83.62%
+Epoch 29, Batch 500: Train Loss: 0.4651, Train Accuracy: 84.11%
+Epoch 29, Batch 600: Train Loss: 0.4619, Train Accuracy: 84.06%
+Epoch 29, Batch 700: Train Loss: 0.4789, Train Accuracy: 83.66%
+Epoch 29/40, Train Loss: 0.4489, Train Accuracy: 84.30%, Test Loss: 0.4844, Test Accuracy: 83.32%
+Epoch 30, Batch 100: Train Loss: 0.4543, Train Accuracy: 84.19%
+Epoch 30, Batch 200: Train Loss: 0.4675, Train Accuracy: 83.78%
+Epoch 30, Batch 300: Train Loss: 0.4800, Train Accuracy: 83.39%
+Epoch 30, Batch 400: Train Loss: 0.4598, Train Accuracy: 83.98%
+Epoch 30, Batch 500: Train Loss: 0.4554, Train Accuracy: 84.00%
+Epoch 30, Batch 600: Train Loss: 0.4567, Train Accuracy: 83.97%
+Epoch 30, Batch 700: Train Loss: 0.4653, Train Accuracy: 83.81%
+Epoch 30/40, Train Loss: 0.4456, Train Accuracy: 84.45%, Test Loss: 0.4645, Test Accuracy: 83.97%
+Epoch 31, Batch 100: Train Loss: 0.4411, Train Accuracy: 84.78%
+Epoch 31, Batch 200: Train Loss: 0.4537, Train Accuracy: 84.28%
+Epoch 31, Batch 300: Train Loss: 0.4595, Train Accuracy: 83.41%
+Epoch 31, Batch 400: Train Loss: 0.4477, Train Accuracy: 84.81%
+Epoch 31, Batch 500: Train Loss: 0.4603, Train Accuracy: 84.17%
+Epoch 31, Batch 600: Train Loss: 0.4579, Train Accuracy: 84.03%
+Epoch 31, Batch 700: Train Loss: 0.4647, Train Accuracy: 83.36%
+Epoch 31/40, Train Loss: 0.4406, Train Accuracy: 84.81%, Test Loss: 0.4657, Test Accuracy: 83.90%
+Epoch 32, Batch 100: Train Loss: 0.4393, Train Accuracy: 84.70%
+Epoch 32, Batch 200: Train Loss: 0.4417, Train Accuracy: 84.72%
+Epoch 32, Batch 300: Train Loss: 0.4691, Train Accuracy: 84.36%
+Epoch 32, Batch 400: Train Loss: 0.4506, Train Accuracy: 84.22%
+Epoch 32, Batch 500: Train Loss: 0.4576, Train Accuracy: 83.81%
+Epoch 32, Batch 600: Train Loss: 0.4628, Train Accuracy: 84.12%
+Epoch 32, Batch 700: Train Loss: 0.4532, Train Accuracy: 84.48%
+Epoch 32/40, Train Loss: 0.4321, Train Accuracy: 84.92%, Test Loss: 0.4616, Test Accuracy: 84.32%
+Epoch 33, Batch 100: Train Loss: 0.4158, Train Accuracy: 85.62%
+Epoch 33, Batch 200: Train Loss: 0.4573, Train Accuracy: 83.66%
+Epoch 33, Batch 300: Train Loss: 0.4607, Train Accuracy: 83.95%
+Epoch 33, Batch 400: Train Loss: 0.4536, Train Accuracy: 84.09%
+Epoch 33, Batch 500: Train Loss: 0.4519, Train Accuracy: 84.27%
+Epoch 33, Batch 600: Train Loss: 0.4315, Train Accuracy: 84.56%
+Epoch 33, Batch 700: Train Loss: 0.4571, Train Accuracy: 84.27%
+Epoch 33/40, Train Loss: 0.4216, Train Accuracy: 85.27%, Test Loss: 0.4577, Test Accuracy: 83.93%
+Epoch 34, Batch 100: Train Loss: 0.4358, Train Accuracy: 84.66%
+Epoch 34, Batch 200: Train Loss: 0.4518, Train Accuracy: 83.86%
+Epoch 34, Batch 300: Train Loss: 0.4370, Train Accuracy: 84.89%
+Epoch 34, Batch 400: Train Loss: 0.4542, Train Accuracy: 84.12%
+Epoch 34, Batch 500: Train Loss: 0.4291, Train Accuracy: 85.39%
+Epoch 34, Batch 600: Train Loss: 0.4292, Train Accuracy: 84.72%
+Epoch 34, Batch 700: Train Loss: 0.4418, Train Accuracy: 84.69%
+Epoch 34/40, Train Loss: 0.4245, Train Accuracy: 85.37%, Test Loss: 0.4644, Test Accuracy: 84.18%
+Epoch 35, Batch 100: Train Loss: 0.4395, Train Accuracy: 84.58%
+Epoch 35, Batch 200: Train Loss: 0.4371, Train Accuracy: 84.92%
+Epoch 35, Batch 300: Train Loss: 0.4356, Train Accuracy: 84.33%
+Epoch 35, Batch 400: Train Loss: 0.4236, Train Accuracy: 85.33%
+Epoch 35, Batch 500: Train Loss: 0.4225, Train Accuracy: 85.28%
+Epoch 35, Batch 600: Train Loss: 0.4384, Train Accuracy: 84.86%
+Epoch 35, Batch 700: Train Loss: 0.4398, Train Accuracy: 85.27%
+Epoch 35/40, Train Loss: 0.4219, Train Accuracy: 85.17%, Test Loss: 0.4671, Test Accuracy: 83.98%
+Epoch 36, Batch 100: Train Loss: 0.4287, Train Accuracy: 84.73%
+Epoch 36, Batch 200: Train Loss: 0.4268, Train Accuracy: 85.16%
+Epoch 36, Batch 300: Train Loss: 0.4453, Train Accuracy: 83.81%
+Epoch 36, Batch 400: Train Loss: 0.4475, Train Accuracy: 84.42%
+Epoch 36, Batch 500: Train Loss: 0.4377, Train Accuracy: 85.11%
+Epoch 36, Batch 600: Train Loss: 0.4283, Train Accuracy: 84.95%
+Epoch 36, Batch 700: Train Loss: 0.4365, Train Accuracy: 84.75%
+Epoch 36/40, Train Loss: 0.4142, Train Accuracy: 85.68%, Test Loss: 0.4515, Test Accuracy: 84.44%
+Epoch 37, Batch 100: Train Loss: 0.4173, Train Accuracy: 85.53%
+Epoch 37, Batch 200: Train Loss: 0.4195, Train Accuracy: 85.20%
+Epoch 37, Batch 300: Train Loss: 0.4238, Train Accuracy: 85.22%
+Epoch 37, Batch 400: Train Loss: 0.4384, Train Accuracy: 84.59%
+Epoch 37, Batch 500: Train Loss: 0.4318, Train Accuracy: 85.16%
+Epoch 37, Batch 600: Train Loss: 0.4252, Train Accuracy: 84.92%
+Epoch 37, Batch 700: Train Loss: 0.4446, Train Accuracy: 84.38%
+Epoch 37/40, Train Loss: 0.4132, Train Accuracy: 85.68%, Test Loss: 0.4542, Test Accuracy: 84.59%
+Epoch 38, Batch 100: Train Loss: 0.4000, Train Accuracy: 85.64%
+Epoch 38, Batch 200: Train Loss: 0.4121, Train Accuracy: 85.62%
+Epoch 38, Batch 300: Train Loss: 0.4273, Train Accuracy: 85.23%
+Epoch 38, Batch 400: Train Loss: 0.4402, Train Accuracy: 84.17%
+Epoch 38, Batch 500: Train Loss: 0.4331, Train Accuracy: 84.94%
+Epoch 38, Batch 600: Train Loss: 0.4297, Train Accuracy: 85.42%
+Epoch 38, Batch 700: Train Loss: 0.4290, Train Accuracy: 85.31%
+Epoch 38/40, Train Loss: 0.4203, Train Accuracy: 85.35%, Test Loss: 0.4646, Test Accuracy: 83.69%
+Epoch 39, Batch 100: Train Loss: 0.4121, Train Accuracy: 86.08%
+Epoch 39, Batch 200: Train Loss: 0.4073, Train Accuracy: 86.16%
+Epoch 39, Batch 300: Train Loss: 0.4400, Train Accuracy: 84.64%
+Epoch 39, Batch 400: Train Loss: 0.4378, Train Accuracy: 85.03%
+Epoch 39, Batch 500: Train Loss: 0.4225, Train Accuracy: 85.17%
+Epoch 39, Batch 600: Train Loss: 0.4094, Train Accuracy: 85.73%
+Epoch 39, Batch 700: Train Loss: 0.4217, Train Accuracy: 85.31%
+Epoch 39/40, Train Loss: 0.4066, Train Accuracy: 85.72%, Test Loss: 0.4501, Test Accuracy: 84.44%
+Epoch 40, Batch 100: Train Loss: 0.4152, Train Accuracy: 85.62%
+Epoch 40, Batch 200: Train Loss: 0.4101, Train Accuracy: 85.08%
+Epoch 40, Batch 300: Train Loss: 0.4005, Train Accuracy: 86.22%
+Epoch 40, Batch 400: Train Loss: 0.4259, Train Accuracy: 84.91%
+Epoch 40, Batch 500: Train Loss: 0.4306, Train Accuracy: 84.59%
+Epoch 40, Batch 600: Train Loss: 0.4191, Train Accuracy: 85.78%
+Epoch 40, Batch 700: Train Loss: 0.4266, Train Accuracy: 85.23%
+Epoch 40/40, Train Loss: 0.4127, Train Accuracy: 85.64%, Test Loss: 0.4636, Test Accuracy: 83.96%
 Finished Training
+
 
   </code></pre>
 
