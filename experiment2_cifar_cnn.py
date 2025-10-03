@@ -31,12 +31,12 @@ testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size,
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        # Input: 3x32x32, Output: 32x32x32, RF: 3x3, Effect: Feature extraction
+        # Input: 3x32x32, Output: 16x32x32, RF: 3x3, Effect: Feature extraction
         self.conv1 = nn.Conv2d(3, 16, kernel_size=3, padding=1, stride=1)
         self.bn1 = nn.BatchNorm2d(16)
 
         # Depthwise Separable Conv Block 1
-        # Input: 32x32x32, Output: 32x32x32, RF: 5x5, Effect: Feature extraction
+        # Input: 16x32x32, Output: 32x32x32, RF: 5x5, Effect: Feature extraction
         self.sep_conv1 = nn.Sequential(
             # Depthwise: Input: 16x32x32, Output: 16x32x32, RF: 5x5, Effect: Depthwise filtering
             nn.Conv2d(16, 16, kernel_size=3, padding=1, groups=16),
@@ -46,17 +46,17 @@ class Net(nn.Module):
         self.bn_sep1 = nn.BatchNorm2d(32)
 
         # Dilated Conv Block 1
-        # Input: 64x32x32, Output: 64x32x32, RF: 9x9, Effect: Expanding receptive field without increasing parameters
+        # Input: 32x32x32, Output: 32x32x32, RF: 9x9, Effect: Expanding receptive field without increasing parameters
         self.dil_conv1 = nn.Conv2d(32, 32, kernel_size=3, padding=2, dilation=2)
         self.bn_dil1 = nn.BatchNorm2d(32)
 
         # Downsampling using stride
-        # Input: 64x32x32, Output: 128x16x16, RF: 11x11, Effect: Downsampling and feature extraction
+        # Input: 32x32x32, Output: 64x16x16, RF: 11x11, Effect: Downsampling and feature extraction
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1, stride=2)
         self.bn2 = nn.BatchNorm2d(64)
 
         # Depthwise Separable Conv Block 2
-        # Input: 128x16x16, Output: 128x16x16, RF: 15x15, Effect: Feature extraction
+        # Input: 64x16x16, Output: 64x16x16, RF: 15x15, Effect: Feature extraction
         self.sep_conv2 = nn.Sequential(
             # Depthwise: Input: 64x16x16, Output: 64x16x16, RF: 15x15, Effect: Depthwise filtering
             nn.Conv2d(64, 64, kernel_size=3, padding=1, groups=64),
@@ -66,21 +66,21 @@ class Net(nn.Module):
         self.bn_sep2 = nn.BatchNorm2d(64)
 
         # Dilated Conv Block 2
-        # Input: 128x16x16, Output: 128x16x16, RF: 23x23, Effect: Expanding receptive field without increasing parameters
+        # Input: 64x16x16, Output: 64x16x16, RF: 23x23, Effect: Expanding receptive field without increasing parameters
         self.dil_conv2 = nn.Conv2d(64, 64, kernel_size=3, padding=2, dilation=2)
         self.bn_dil2 = nn.BatchNorm2d(64)
 
         # Downsampling using stride
-        # Input: 128x16x16, Output: 256x8x8, RF: 27x27, Effect: Downsampling and feature extraction
+        # Input: 64x16x16, Output: 128x8x8, RF: 27x27, Effect: Downsampling and feature extraction
         self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1, stride=2)
         self.bn3 = nn.BatchNorm2d(128)
 
         # Global Average Pooling
-        # Input: 256x8x8, Output: 256x1x1, RF: 27x27, Effect: Global feature aggregation
+        # Input: 128x8x8, Output: 128x1x1, RF: 27x27, Effect: Global feature aggregation
         self.gap = nn.AdaptiveAvgPool2d((1, 1))
 
         # Fully Connected Layer
-        # Input: 256, Output: 10, RF: 27x27, Effect: Classification
+        # Input: 128, Output: 10, RF: 27x27, Effect: Classification
         self.fc = nn.Linear(128, 10)
 
     def forward(self, x):
