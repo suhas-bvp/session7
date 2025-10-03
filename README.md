@@ -1,3 +1,100 @@
+# Experiment 2 (experiment2_cifar_cnn.py)
+  --> CIFAR-10 CNN Model with Albumentations Augmentation
+
+## Model Overview
+This project implements a Convolutional Neural Network (CNN) for CIFAR-10 image classification using PyTorch. The training pipeline leverages the Albumentations library for advanced data augmentation, including horizontal flip, affine transformations, and coarse dropout.
+
+## Number of Parameters
+The total number of trainable parameters in the model is **201,802**.
+
+### Parameter Calculation Breakdown
+
+| Layer         | Formula                                      | Parameters |
+|-------------- |----------------------------------------------|------------|
+| conv1         | (3×16×3×3) + 16 (bias)                       | 448        |
+| bn1           | 16×2                                         | 32         |
+| sep_conv1     | (16×3×3)+16 (bias) + (16×32×1×1)+32 (bias)   | 160+544=704|
+| bn_sep1       | 32×2                                         | 64         |
+| dil_conv1     | (32×32×3×3) + 32 (bias)                      | 9,248      |
+| bn_dil1       | 32×2                                         | 64         |
+| conv2         | (32×32×3×3) + 32 (bias)                      | 9,248      |
+| bn2           | 32×2                                         | 64         |
+| sep_conv2     | (32×3×3)+32 (bias) + (32×32×1×1)+32 (bias)   | 320+1,056=1,376|
+| bn_sep2       | 32×2                                         | 64         |
+| dil_conv2     | (32×32×3×3) + 32 (bias)                      | 9,248      |
+| bn_dil2       | 32×2                                         | 64         |
+| conv3         | (32×64×3×3) + 64 (bias)                      | 18,496     |
+| bn3           | 64×2                                         | 128        |
+| dil_conv3     | (64×64×3×3) + 64 (bias)                      | 36,928     |
+| bn_dil3       | 64×2                                         | 128        |
+| fc            | (64×10) + 10 (bias)                          | 650        |
+| **Total**     |                                              | **201,802**|
+
+## CNN Architecture
+The model consists of the following blocks:
+
+1. **Initial Feature Extraction**
+   - `Conv2d(3, 16, 3x3, padding=1)` + `BatchNorm2d(16)`
+   - Effect: Extracts low-level features (edges, colors) from the input image.
+
+2. **Depthwise Separable Convolution**
+   - `Conv2d(16, 16, 3x3, padding=1, groups=16)` (depthwise)
+   - `Conv2d(16, 32, 1x1)` (pointwise)
+   - `BatchNorm2d(32)`
+   - Effect: Efficiently increases feature complexity while keeping parameter count low.
+
+3. **Dilated Convolution**
+   - `Conv2d(32, 32, 3x3, padding=2, dilation=2)` + `BatchNorm2d(32)`
+   - Effect: Captures larger spatial context without increasing parameters.
+
+4. **Downsampling**
+   - `Conv2d(32, 32, 3x3, padding=1, stride=2)` + `BatchNorm2d(32)`
+   - Effect: Reduces spatial resolution to focus on higher-level features.
+
+5. **Depthwise Separable Convolution (Lower Resolution)**
+   - `Conv2d(32, 32, 3x3, padding=1, groups=32)` (depthwise)
+   - `Conv2d(32, 32, 1x1)` (pointwise)
+   - `BatchNorm2d(32)`
+   - Effect: Further increases feature complexity efficiently at lower resolution.
+
+6. **Dilated Convolution (Lower Resolution)**
+   - `Conv2d(32, 32, 3x3, padding=2, dilation=2)` + `BatchNorm2d(32)`
+   - Effect: Captures even larger spatial context at lower resolution.
+
+7. **Downsampling and Channel Increase**
+   - `Conv2d(32, 64, 3x3, padding=1, stride=2)` + `BatchNorm2d(64)`
+   - Effect: Reduces spatial size and increases feature channels for richer representation.
+
+8. **Large Receptive Field with High Dilation**
+   - `Conv2d(64, 64, 3x3, padding=5, dilation=5)` + `BatchNorm2d(64)`
+   - Effect: Aggregates global context, helps with classification of large patterns.
+
+9. **Global Average Pooling and Classifier**
+   - `AdaptiveAvgPool2d((1, 1))`
+   - `Linear(64, 10)`
+   - Effect: Reduces each feature map to a single value, then classifies.
+
+
+## Learning
+
+- **Data Augmentation**: Techniques like horizontal flip, affine transformations, and coarse dropout increase the diversity of the training data, helping the model generalize better and reducing overfitting. This is especially important for small datasets like CIFAR-10, where augmentations simulate real-world variations and improve robustness.
+  - **Horizontal Flip**: Randomly flips images left-right.
+  - **Affine**: Randomly shifts, scales, and rotates images.
+  - **CoarseDropout**: Randomly masks out a 16x16 region, filled with the dataset mean.
+  - **Normalization**: Uses CIFAR-10 mean and std.
+
+- **Depthwise Separable Convolution**: This operation factorizes a standard convolution into a depthwise (per-channel) convolution followed by a pointwise (1x1) convolution. It drastically reduces the number of parameters and computations, allowing the network to be deeper or wider without increasing model size, while still capturing complex features.
+
+- **Dilated Convolution**: By introducing gaps (dilations) between kernel elements, dilated convolutions expand the receptive field without increasing the number of parameters or reducing spatial resolution. This helps the model capture more global context and relationships in the image, which is useful for recognizing larger patterns or objects.
+
+- **Global Average Pooling (GAP) and Fully Connected (FC) Layer**: GAP reduces each feature map to a single value by averaging, which minimizes overfitting and enforces spatial invariance. The final FC layer then maps these global features to class scores. This combination is efficient and effective for classification tasks, as it reduces the number of parameters compared to flattening the entire feature map.
+
+## Accuracy and Output
+
+<!-- Add your accuracy and output results here -->
+
+
+
 <img width="1435" height="865" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/10d710ae-ed3d-4153-b459-31f9bbe46dcf" />
 
 
