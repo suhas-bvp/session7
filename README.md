@@ -4,8 +4,9 @@
 ## Model Overview
 This project implements a Convolutional Neural Network (CNN) for CIFAR-10 image classification using PyTorch. The training pipeline leverages the Albumentations library for advanced data augmentation, including horizontal flip, affine transformations, and coarse dropout.
 
+
 ## Number of Parameters
-The total number of trainable parameters in the model is **201,802**.
+The total number of trainable parameters in the model is **86,954**.
 
 ### Parameter Calculation Breakdown
 
@@ -28,7 +29,8 @@ The total number of trainable parameters in the model is **201,802**.
 | dil_conv3     | (64×64×3×3) + 64 (bias)                      | 36,928     |
 | bn_dil3       | 64×2                                         | 128        |
 | fc            | (64×10) + 10 (bias)                          | 650        |
-| **Total**     |                                              | **201,802**|
+| **Total**     |                                              | **86,954**|
+
 
 ## CNN Architecture
 The model consists of the following blocks:
